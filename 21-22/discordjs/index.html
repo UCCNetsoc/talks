@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>DiscordJS</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-auto-animate style="height: 100%;">
+				<h1 style="margin-top: 20%">Discord<span style="color: #3e50ec">JS</span></h1>
+				<h2>and the Interaction API</h2>
+				<small style="position: absolute; bottom: 0; right: 0;">By Thomas Galligan</small>
+			</section>
+			<section>
+				<h4>
+					Writing a Discord Bot is a great opportunity to learn to code, or learn to use your coding abilities
+					and see what you can achieve
+				</h4>
+			</section>
+			<section>
+				<h2>
+					Why Javascript?
+				</h2>
+				<h5>
+					Javascript has been the most commonly-used programming language for the 9th year in a row, so
+					resources to get help and learn will be out there, and if you run into a problem, someoene else
+					has (probably) already fixed it.
+				</h5>
+			</section>
+			<section>
+				<section>
+					<h2>
+						About the Discord API
+					</h2>
+				</section>
+				<section>
+					<h4>
+						Almost everyone who's used Discord has interacted with a bot at some point.
+						They can provide instrumental uses in certain communities... Such as...
+					</h4>
+				</section>
+				<section>
+					<img style="height: 60vh; width: auto;" src="https://cdn.discordapp.com/attachments/635890584162402322/900380454509756466/9cca62b20881ea9e117b3ee9905c55a9.png" alt="">
+				</section>
+				<section>
+					<h3>Recently, Discord have decided they want to change the way bots work</h3>
+					<h4>Previously, a bot would listen to every message in every guild it is invited to, whereas now,
+						special "interactions" are formed between a user and a bot</h4>
+				</section>
+				<section>
+					<h3>The most common of which is the "slash command"</h3>
+				</section>
+			</section>
+			<section>
+				<h2>The good about Slash Commands</h2>
+				<p>They provide an interface to allow one to see how to run the command, as they are writing the command
+				</p>
+			</section>
+			<section>
+				<h2>The bad about Slash Commands</h2>
+				<p>They make it more difficult to do more traditional discord bot functions, like simple messsage
+					scanning, censoring etc...</p>
+			</section>
+			<section>
+				<section>
+					<h2>Intro to Slashing</h2>
+					<p>Slash commands need to be registered, to provide a user interface to use a command that can store
+						parameters</p>
+					<img src="/assets/command.png" alt="screenshot of slash command user interface" srcset="">
+				</section>
+				<section>
+					<h3>Parameter Data Types</h3>
+					<img src="assets/parameter-types.png" alt="">
+				</section>
+			</section>
+			<section>
+				<section>
+					<h3>What can you do with a Discord bot?</h3>
+				</section>
+				<section>
+					<h2>Make a game</h2>
+					<h4>Myuu</h4>
+					<img src="./assets/myuu.png" alt="">
+					<p>This bot implements a Pokemon game system wherein you "catch" pokemon, and can trade and compete
+						in PVP and many other features</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>But not all bots are simply just bots alone.</h2>
+				</section>
+				<section>
+					<h3>Both of the (current) Netsoc discord bots have an API as well as a discord bot interface</h3>
+				</section>
+				<section>
+					<h3>Now lets look at a bad example of a Discord Bot</h3>
+				</section>
+			</section>
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>
