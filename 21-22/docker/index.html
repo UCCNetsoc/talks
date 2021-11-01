@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Intro To Docker</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	<style type="text/css">
+		:root {
+			--r-background-color: #212121;
+			--r-main-color: #f5f5f5;
+			--r-heading-color: #0c8df5;
+			--r-link-color: #2196f3;
+			--r-link-color-dark: #007bde;
+			--r-link-color-hover: #0ccaf5;
+			--r-main-font: monospace;
+		}
+
+		.reveal section p, section ul li {
+			font-size: 0.7em !important;
+		}
+
+		.reveal section pre code {
+			font-size: 0.75em !important;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<!-- Titlecard -->
+			<section>
+				<section>
+					<h1>Intro To Docker</h1>
+					<span>By Eric Moynihan</span>
+					<br />
+					<br />
+					<p>Want to install it?</p>
+					<p>Go to <a href="https://netsoc.co/go/get-docker" target="_blank">netsoc.co/go/get-docker</a></p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h1>What is Docker?</h1>
+					<p>Docker allows you to build and run <b>containers</b>.</p>
+				</section>
+				<section>
+					<img src="arch.png" alt="">
+				</section>
+			</section>
+			<section>
+				<section>
+					<h1>What are containers?</h1>
+					<p>Containers provide isolation of resources to a program such as:</p>
+					<ul>
+						<li>Networking</li>
+						<li>Storage</li>
+						<li>CPUs</li>
+					</ul>
+				</section>
+				<section>
+					<img src="containers.png" alt="">
+				</section>
+			</section>
+			<section>
+				<section>
+					<h1>Images</h1>
+					<p>An image is a virtual disk that you provide to docker in order to run a container.</p>
+					<p>You can get many images such as <i>Ubuntu</i>, <i>Python</i>, etc</p>
+				</section>
+				<section>
+					<script id="asciicast-Kp9IqvF3Bq3pVShQ6tKoFZOmZ" src="https://asciinema.org/a/Kp9IqvF3Bq3pVShQ6tKoFZOmZ.js" async></script>
+				</section>
+				<section>
+					<h2>Pulling from <a href="http://hub.docker.com">hub.docker.com</a></h2>
+					<script id="asciicast-SSrmfWY3fIBjz6csy1Bw46Z1k" src="https://asciinema.org/a/SSrmfWY3fIBjz6csy1Bw46Z1k.js" async></script>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h1>Creating/Running a container</h1>
+					<p>A container must be created from an image.</p>
+					<p>Images on your local machine can be found with <b>docker image ls</b></p>
+					<p>Images can be used by calling their <u>name:label</u> or by calling their ID directly</p>
+				</section>
+				<section>
+					<script id="asciicast-T0VwAldaBxtIhPKgQClnGOaCL" src="https://asciinema.org/a/T0VwAldaBxtIhPKgQClnGOaCL.js" async></script>
+				</section>
+				<section>
+					<h2>Listing containers</h2>
+					<script id="asciicast-00g2DLiczcCoBGkVkpxYGFnrw" src="https://asciinema.org/a/00g2DLiczcCoBGkVkpxYGFnrw.js" async></script>
+				</section>
+			</section>
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>
