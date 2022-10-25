@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Intro To Git</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	<style type="text/css">
+		:root {
+			--r-background-color: #212121;
+			--r-main-color: #f5f5f5;
+			--r-heading-color: #0c8df5;
+			--r-link-color: #2196f3;
+			--r-link-color-dark: #007bde;
+			--r-link-color-hover: #0ccaf5;
+			--r-main-font: monospace;
+		}
+
+		.reveal section p, section ul li {
+			font-size: 0.7em !important;
+		}
+
+		.reveal section pre code {
+			font-size: 0.75em !important;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<!-- Titlecard -->
+			<section>
+				<section>
+					<h1>Intro To Git</h1>
+					<p>What? Why? How?</p>
+				</section>
+				<section>
+					<p>"Inspired" by</p>
+					<p>James `Jotter` Cotter's slides</p>
+					<small>inspired by Noah&nbsp;`strum355`&nbsp;Santschi&#8209;Cooney's&nbsp;slides</small>
+					<small>inspired by Colm `mloc` ó hIcí's slides</small>
+					<small>inspired by Adam Gillessen's slides</small>
+				</section>
+			</section>
+			<!-- What is Git -->
+			<section>
+				<h1>What is Git?</h1>
+				<p>Created by Linus Torvalds in 2005</p>
+				<br />
+				<p>Git is a system which developers can use track changes in files in a timeline and can merge timelines
+					to incorporate other developer's changes into their own timelines</p>
+			</section>
+			<!-- Why use Git -->
+			<section>
+				<h1>Why use Git?</h1>
+				<ul>
+					<li class="fragment fade-in">Have you ever made a mistake that you couldn't fix with Ctrl+Z?</li>
+					<li class="fragment fade-in">Are you sick of collaborating code over Google Docs?</li>
+				</ul>
+			</section>
+				<section>
+					<h1>Version Control</h1>
+					<ul>
+						<li class="fragment fade-in">Version control is the practice of tracking and managing changes to code over time.</li>
+						<li class="fragment fade-in">We can then recall specific versions later on.</li>
+						<li class="fragment fade-in">Version Control is heavily used in companies for code versioning and
+								collaboration.</li>
+					</ul>
+				</section>
+			<!-- How does Git Work -->
+			<section>
+				<h1>How does Git Work?</h1>
+				<p>Code is stored in Git as a collection called a repository.</p>
+				<p>Changes are represented by commits, which have an owner, message and set of changed files.</p>
+			</section>
+			<section>
+				<section>
+					<h1>How to use Git?</h1>
+					<p>The default way is through the command line</p>
+					<p>There are a number of GUI tools built around the Git ecosystem and many editors have Git support
+						built in</p>
+				</section>
+				<section>
+					<h2>Cloning</h2>
+					<p>Downloads a copy of a remote repository including all history to your computer.</p>
+					<pre>
+						<code data-trim data-noescape class="language-zsh">
+							# Clone the repo
+							$ git clone https://github.com/UCCNetsoc/hacktoberfest.git
+						</code>
+					</pre>
+					<p>If you are working with GitHub you may want to clone your fork instead</p>
+					<pre>
+						<code data-trim data-noescape class="language-zsh">
+							$ git clone https://github.com/jac/hacktoberfest.git
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h2>Making Changes</h2>
+					<p>Now that the repo is cloned, you can do whatever you want to the local files. Once
+						we make some changes we can use `git status` to see what files have changed:
+					</p>
+					<pre>
+						<code data-trim data-noescape class="language-nohighlight">
+							$ git status
+							On branch master
+							Untracked files:
+							(use "git add <file>..." to include in what will be committed)
+
+							sample.txt
+						</code>
+					</pre>
+					<p>`git status` will show you any files that have been added, changed, or removed</p>
+				</section>
+				<section>
+					<h2>Making Changes</h2>
+					<p>We can now use `git add` to choose the files we want to include in the commit</p>
+					<pre>
+						<code data-trim data-noescape class="language-nohighlight">
+							$ git add sample.txt
+						</code>
+					</pre>
+					<p>And then we use `git commit` to actually record the commit:</p>
+					<pre>
+					<code data-trim data-noescape class="language-nohighlight">
+						# allows setting the commit message in the quotes
+						$ git commit -m "big big ch-anges"
+					</code>
+					</pre>
+					<p>And finally, `git push` to upload the changes to the remote repository (GitHub, in this case)</p>
+				</section>
+			</section>
+			<!-- GitHub -->
+			<section>
+				<section>
+					<h1>Hold on! GitHub? Forks?</h1>
+					<p>GitHub is a more easily accessible interface and user experience for collaborating</p>
+					<p>Users can "fork" repositories, creating a copy/snapshot of a repository under the user's account
+					</p>
+					<p>After making changes to this fork, users can create a "pull request" to request the changes be
+						"pulled" into the main repository</p>
+				</section>
+				<section>
+					<h2>Reviewing</h2>
+					<p>If you're maintaining an open source project, 80%+ of your time will be spent reviewing other
+						people's code</p>
+					<p>GitHub makes this relatively easy with pull requests</p>
+				</section>
+			</section>
+			<section>
+				<h1>Questions?</h1>
+			</section>
+			<section>
+				<h3>Thanks for listening!</h3>
+				<p>More reading:</p>
+				<ul>
+					<li><a href="https://git-scm.com/doc">https://git-scm.com/doc</a></li>
+					<li><a href="https://guides.github.com/">https://guides.github.com/</a></li>
+				</ul>
+			</section>
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>
